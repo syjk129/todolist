@@ -1,38 +1,18 @@
 import * as React  from 'react';
+import {observable, computed} from 'mobx';
+import {observer} from 'mobx-react';
+import DevTools from 'mobx-react-devtools';
+import CounterState from '../stores/CounterState'
 
-interface ICounterProps {
-	increment: number;
-	color: string;
-}
-
-interface ICounterState {
-	counter: number;
-}
-
-export default class Counter extends React.Component<ICounterProps, ICounterState> {
-	private interval: number;
-
-	constructor(props) {
-		super(props);
-		this.state = { counter: 0 };
-		this.interval = window.setInterval(() => this.tick(), 1000);
-	}
-
-	tick() {
-		this.setState({
-			counter: this.state.counter + this.props.increment
-		});
-	}
-
-	componentWillUnmount() {
-		window.clearInterval(this.interval);
-	}
-
+@observer
+class Counter extends React.Component<{appState: CounterState}, {}> {
 	render() {
 		return (
-			<h1 style={{ color: this.props.color }}>
-				Counter ({this.props.increment}): {this.state.counter}
+			<h1 style={{ color: this.props.appState.color }}>
+				Counter {this.props.appState.elapsedTime}
 			</h1>
 		);
 	}
 }
+
+export default Counter
