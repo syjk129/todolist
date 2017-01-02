@@ -1,9 +1,32 @@
 {
-  "name": "todolist",
-  "version": "1.0.0",
-  "description": "Simple todolist app using mobx react and typescript",
-  "main": "index.js",
-  "repository": "https://github.com/syjk129/todolist.git",
-  "author": "shawn kim",
-  "license": "MIT"
+	"name": "todolist",
+	"version": "1.0.0",
+	"description": "Simple todolist with typescript, react and mobx",
+	"scripts": {
+		"clean": "rimraf dist",
+		"start": "node src/build/app.js"
+	},
+	"author": "Shawn Kim",
+	"license": "trisk",
+	"devDependencies": {
+		"babel-core": "^5.4.7",
+		"babel-loader": "^5.1.2",
+		"babel-plugin-react-transform": "^1.1.1",
+		"express": "^4.13.3",
+		"react-transform-catch-errors": "^1.0.0",
+		"react-transform-hmr": "^1.0.0",
+		"redbox-react": "1.2.6",
+		"rimraf": "^2.4.3",
+		"ts-loader": "^0.7.2",
+		"typescript": "^1.6.2",
+		"webpack": "^1.9.6",
+		"webpack-dev-middleware": "^1.2.0",
+		"webpack-hot-middleware": "^2.0.0"
+	},
+	"dependencies": {
+		"mobx": "^2.7.0",
+		"mobx-react": "^4.0.4",
+		"react": "^0.14.0",
+		"react-dom": "^0.14.0"
+	}
 }
