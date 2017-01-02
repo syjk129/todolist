@@ -1,9 +1,0 @@
-{
-  "name": "todolist",
-  "version": "1.0.0",
-  "description": "Simple Todolist app using react, mobx and typescript",
-  "main": "index.js",
-  "repository": "https://github.com/syjk129/todolist.git",
-  "author": "Shawn Km",
-  "license": "trisk"
-}
